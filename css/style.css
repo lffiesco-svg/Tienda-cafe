@@ -1,73 +1,214 @@
 @import url('https://fonts.googleapis.com/css2?family=Miniver&display=swap');
-body{
-    background-color: #3b141c;
-   
+
+/* ---------- ESTILOS GENERALES ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    background-color: #3b141c;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
 html {
     scroll-behavior: smooth;
 }
-.container-header{
-   background: #3b141c;
+
+.container-header {
+    background: #3b141c;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 99;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
-.container-header header{
+
+.container-header header {
     max-width: 1110px;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 15px 20px;
-    
+    padding: 15px 20px;
 }
-.container-header header .logo a{
-   
-    font-size: 45px;
-    color:#fff;
-    text-decoration: none;
 
+.container-header header .logo a {
+    font-size: 45px;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Miniver", sans-serif;
 }
-.container-header header ul{
+
+.container-header header ul {
     display: flex;
     list-style: none;
 }
-.container-header header nav ul li a{
+
+.container-header header nav ul li a {
     text-align: center;
-    color:#fff;
+    color: #fff;
     margin: 0 15px;
     padding: 3px;
     transition: .5s;
-    text-decoration:none;
+    text-decoration: none;
 }
-.container-header header nav ul li a:hover{
+
+.container-header header nav ul li a:hover {
     background-color: #f3961c;
     color: black;
     border-radius: 500px;
     padding: 8px 8px;
 }
-.home{
-    height: 70vh;
+
+/* ---------- HAMBURGUESA ---------- */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #f3961c;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    z-index: 300;
+}
+
+/* ---------- SECCIÓN HOME ---------- */
+.home {
+    min-height: 90vh;
     color: #fff;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-  
-    
+    margin-top: 100px;
+    padding: 0 60px;
+    gap: 40px;
 }
-.home .container-banner h2{
-    font-family:"Miniver", sans-serif;
+
+.home .container-banner {
+    flex: 1;
+}
+
+.home .container-banner h2 {
+    font-family: "Miniver", sans-serif;
     color: #f3961c;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
-button{
+
+.home .container-banner h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.home .container-banner p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+button {
     background-color: #f3961c;
     border-radius: 400px;
-    flex-direction: column;
+    border: none;
+    padding: 10px 25px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.3s;
 }
-.container-banner .container-img img{
+
+button:hover {
+    color: white;
+    background-color: #c97d17;
+}
+
+.container-img img {
     display: block;
-    width: 80%;
+    width: 100%;
+    max-width: 500px;
     margin: auto;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* 📱 Celulares */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .container-header header nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.95);
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 200px;
+        padding: 15px 0;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav ul {
+        display: flex;
+    }
+
+    .container-header header .nav ul li {
+        margin: 10px 0;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .home .container-banner h1 {
+        font-size: 28px;
+    }
+
+    .home .container-banner h2 {
+        font-size: 20px;
+    }
+
+    .home .container-banner p {
+        font-size: 16px;
+    }
+
+    .container-img img {
+        width: 90%;
+        margin-top: 20px;
+    }
+}
+
+/* 📱 Muy pequeño (teléfonos chicos) */
+@media (max-width: 480px) {
+    .container-header header .logo a {
+        font-size: 30px;
+    }
+
+    .home .container-banner h1 {
+        font-size: 22px;
+    }
+
+    .home .container-banner h2 {
+        font-size: 16px;
+    }
+
+    .home .container-banner p {
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }

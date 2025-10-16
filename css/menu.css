@@ -71,7 +71,17 @@ nav ul li a:hover {
     cursor: pointer;
     transition: transform 0.3s ease, color 0,3s ease;
 }
-
+#menu-toggle{
+    display: none;
+}
+.menu-icon{
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #f3961c;
+    margin-left: auto;
+    border-radius: 20px;
+}
 
 main{
     max-width: 1000px;
@@ -167,4 +177,79 @@ h1{
 .detalles:hover{
     background-color: #252525;
     color: white;
+}
+/* 📱 Celulares */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .container-header header nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.95);
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 200px;
+        padding: 15px 0;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav ul {
+        display: flex;
+    }
+
+    .container-header header .nav ul li {
+        margin: 10px 0;
+    }
+ .carrito {
+    margin: 10px auto;
+    position: relative;
+  }
+
+  .carrito #contador {
+    top: -5px;
+    right: -15px;
+  }
+
+  /* Grid en una sola columna */
+  .container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .ecard {
+    flex-direction: column;
+  }
+
+  .ecard img {
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .contenido p {
+    font-size: 13px;
+  }
+
+  .comprar, .detalles {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+   
+
+
+/* 📱 Muy pequeño (teléfonos chicos) */
+@media (max-width: 480px) {
+    .container-header header .logo a {
+        font-size: 30px;
+    }
+
 }
