@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/Galeria.css">
-    <title>Inicio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/Galeria.css" />
+  <script src="https://kit.fontawesome.com/bdc4e23805.js" crossorigin="anonymous"></script>
+  <title>Galería</title>
 </head>
 <body>
-    <div class="container-header">
-        <header>
-            <div class="logo">
-                <a href="#">☕️Coffee</a>
-            </div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./menu.html">Menu</a></li>
-                    <li><a href="./Galeria.html">Galeria</a></li>
-                    <li><a href="./Contac.html">Contactenos</a></li>
-                </ul>
-            </nav>
-    
-        </header>
+  <div class="container-header">
+    <header>
+      <div class="logo">
+        <a href="#">☕️Coffee</a>
+      </div>
+
+      <!-- ✅ Hamburguesa sin JS -->
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./menu.html">Menu</a></li>
+          <li><a href="./Galeria.html">Galeria</a></li>
+          <li><a href="./Contac.html">Contactenos</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <section class="fotosgaleria">
+    <h1>Galería</h1>
+    <div class="fotos">
+      <img src="./img/gallery-1.jpg" alt="Galeria 1" />
+      <img src="./img/gallery-2.jpg" alt="Galeria 2" />
+      <img src="./img/gallery-3.jpg" alt="Galeria 3" />
+      <img src="./img/gallery-4.jpg" alt="Galeria 4" />
+      <img src="./img/gallery-5.jpg" alt="Galeria 5" />
+      <img src="./img/gallery-6.jpg" alt="Galeria 6" />
     </div>
-        <section class="fotosgaleria">
-            <h1>Galeria</h1>
-            <div class="fotos">
-             <img src="./img/gallery-1.jpg" alt="Galeria 1">
-             <img src="./img/gallery-2.jpg" alt="Galeria 2">
-             <img src="./img/gallery-3.jpg" alt="Galeria 3">
-             <img src="./img/gallery-4.jpg" alt="Galeria 4">
-             <img src="./img/gallery-5.jpg" alt="Galeria 5">
-             <img src="./img/gallery-6.jpg" alt="Galeria 6">   
-            </div>
-        </section>
+  </section>
 </body>
 </html>
